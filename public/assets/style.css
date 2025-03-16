@@ -1,0 +1,96 @@
+* {
+  margin: 0;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  font-family: Verdana, sans-serif;
+}
+
+div.main {
+  border: 1px black solid;
+  border-radius: 1em;
+  padding: 2em;
+}
+
+h1.titulo-pagina {
+  text-align: center;
+}
+
+div.form-container {
+  margin: 1.5em 0em 1.5em 0em;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+div.campo-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 1em;
+  width: 320px;
+}
+
+div.campo-form label {
+  font-size: 1.2em;
+  margin-bottom: 8px;
+}
+
+div.campo-form input,
+div.campo-form select {
+  font-size: 0.8em;
+  padding: 0.3em;
+  border: 1px black solid;
+  border-radius: 0.5em;
+  width: 100%;
+  text-align: center;
+}
+
+div.campo-form select {
+  cursor: pointer;
+}
+
+div.campo-form select option {
+  color: black;
+}
+
+div.botoes {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+div.botoes button,
+div.botoes a {
+  padding: 0.3em;
+  font-size: 0.7em;
+  width: 150px;
+  border: 0;
+  border-radius: 8px;
+  color: white;
+  cursor: pointer;
+  transition: 0.5s;
+  text-align: center;
+}
+
+div.botoes button:hover,
+div.botoes a:hover {
+  transform: scale(1.1);
+}
+
+div.botoes a {
+  text-decoration: none;
+  background-color: blue;
+}
+
+div.botoes button {
+  background-color: green;
+}
