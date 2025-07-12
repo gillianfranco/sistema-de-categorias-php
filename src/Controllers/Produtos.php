@@ -8,7 +8,7 @@
 
     if (!empty($product_name) && !empty($id_category)){
         if (!product_exists($connection, $table_products, $product_name)){
-            register_product($connection, $table_products, $product_name, $amount, $id_category);
+            register_product($connection, $table_categories, $table_products, $product_name, $amount, $id_category);
         }
     }
 
