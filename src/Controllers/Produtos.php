@@ -8,7 +8,7 @@
 
     if (!empty($product_name) && !empty($id_category)){
 
-        register_produtct($connection, $table_products, $product_name, $amount, $id_category);
+        register_product($connection, $table_products, $product_name, $amount, $id_category);
     }
 
     mysqli_close($connection);

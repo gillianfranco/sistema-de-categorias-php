@@ -15,7 +15,7 @@
 
     // Registro de Produtos
 
-    function register_produtct($conn, $table_name, $product_name, $amount=0, $id_category){
+    function register_product($conn, $table_name, $product_name, $amount=0, $id_category){
         $sql = "INSERT INTO $table_name (nome, unidades, id_categoria) VALUES ('$product_name', $amount, $id_category)";
 
         $register = mysqli_query($conn, $sql);
