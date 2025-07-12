@@ -24,4 +24,17 @@
             die("Falha ao registrar o produto: " . mysqli_error($conn));
         }
     }
+
+    // Verifica se há categoria cadastrada
+
+    function hasCategories($conn, $table_name){
+        $sql = "SELECT 1 FROM $table_name LIMIT 1";
+        $result = mysqli_query($conn, $sql);
+
+        if ($result && mysqli_num_rows($result) > 0) {
+            return true;
+        }
+
+        return false;
+    }
 ?>

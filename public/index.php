@@ -9,6 +9,7 @@
 <body>
     <?php
         require_once "../src/Database/db-connection.php";
+        require_once "../src/Database/database.php";
     ?>
     <div class="main">
         <h1 class="titulo-pagina">Registro de Produtos</h1>
@@ -42,6 +43,17 @@
             <a href="criar-categoria.php" id="criar-categoria">Criar Nova Categoria</a>
             <a href="" id="visualizar-produtos">Visualizar os Produtos</a>
             <button type="button" id="registrar-produto">Registrar Produto</button>
+            <?php 
+                if (hasCategories($connection, $table_categories)) {
+                echo "<script>document.getElementById('registrar-produto').disabled = false;</script>";
+            } else {
+                echo "<script>
+                    const btn = document.getElementById('registrar-produto');
+                    btn.disabled = true;
+                    btn.style.backgroundColor = 'gray';
+                </script>";
+            }
+            ?>
         </div>
     </div>
     <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
