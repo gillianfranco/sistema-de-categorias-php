@@ -23,10 +23,11 @@ h1.titulo-pagina {
 }
 
 div.form-container {
-  margin: 1.5em 0em 1.5em 0em;
+  margin: 1.5em 0em 1em 0em;
   width: 100%;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
   justify-content: space-evenly;
 }
@@ -79,6 +80,7 @@ div.botoes a {
   cursor: pointer;
   transition: 0.5s;
   text-align: center;
+  margin: 0.5em;
 }
 
 div.botoes button:hover,
@@ -89,6 +91,9 @@ div.botoes a:hover {
 div.botoes a {
   text-decoration: none;
   background-color: blue;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 div.botoes button {

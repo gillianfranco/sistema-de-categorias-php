@@ -40,8 +40,9 @@
             </div>
         </div>
         <div class="botoes">
+            <a href="" id="gerenciar-categorias">Gerenciar Categorias</a>
             <a href="criar-categoria.php" id="criar-categoria">Criar Nova Categoria</a>
-            <a href="" id="visualizar-produtos">Visualizar os Produtos</a>
+            <a href="" id="gerenciar-produtos">Gerenciar Produtos</a>
             <button type="button" id="registrar-produto">Registrar Produto</button>
             <?php 
                 if (hasCategories($connection, $table_categories)) {
