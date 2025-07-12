@@ -16,7 +16,6 @@ $(document).ready(function () {
       async: false,
       success: function () {
         $("#input-nome-categoria").val("");
-        window.alert("Categoria registrada com sucesso!");
       },
       error: function (error) {
         console.error("Erro na requisição: " + error);
@@ -50,7 +49,6 @@ $(document).ready(function () {
       },
       error: function (error) {
         console.error("Erro na requisição: " + error);
-        window.alert("Produto registrado com sucesso!");
       },
     });
   });

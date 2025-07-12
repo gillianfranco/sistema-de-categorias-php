@@ -47,13 +47,13 @@
             <?php 
                 if (hasCategories($connection, $table_categories)) {
                 echo "<script>document.getElementById('registrar-produto').disabled = false;</script>";
-            } else {
-                echo "<script>
-                    const btn = document.getElementById('registrar-produto');
-                    btn.disabled = true;
-                    btn.style.backgroundColor = 'gray';
-                </script>";
-            }
+                } else {
+                    echo "<script>
+                        const btn = document.getElementById('registrar-produto');
+                        btn.disabled = true;
+                        btn.style.backgroundColor = 'gray';
+                    </script>";
+                }
             ?>
         </div>
     </div>
