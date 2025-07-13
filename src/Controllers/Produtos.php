@@ -11,6 +11,4 @@
             register_product($connection, $table_categories, $table_products, $product_name, $amount, $id_category);
         }
     }
-
-    mysqli_close($connection);
 ?>

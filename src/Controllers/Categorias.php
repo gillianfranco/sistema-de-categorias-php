@@ -12,5 +12,4 @@
             update_category($connection, $table_categories, $category_id, $category_name);
         }
     }
-
-    mysqli_close($connection);
+?>
