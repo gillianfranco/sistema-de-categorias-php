@@ -27,7 +27,6 @@ div.form-container {
   width: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
   justify-content: space-evenly;
 }
@@ -98,4 +97,45 @@ div.botoes a {
 
 div.botoes button {
   background-color: green;
+}
+
+div.table {
+  margin: 1.5em 0em 1em 0em;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 400px;
+  overflow: auto;
+}
+
+div.table table {
+  width: 100%;
+}
+
+div.table table thead th:not(:last-child) {
+  border-right: 1px solid black;
+}
+
+div.table table tbody tr {
+  border-spacing: 0;
+}
+
+div.table table tbody tr td {
+  text-align: center;
+  padding: 0.5em 0em 0.5em 0em;
+}
+
+td.category-edit button {
+  border-radius: 2px;
+  cursor: pointer;
+  color: white;
+}
+
+td.category-edit button.update-category {
+  background-color: green;
+}
+
+td.category-edit button.delete-category {
+  background-color: red;
 }

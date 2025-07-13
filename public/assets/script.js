@@ -1,28 +1,4 @@
 $(document).ready(function () {
-  // Requisição da página de criação de categorias
-  $("button#criar-categoria").click(function () {
-    var nome_categoria = $("#input-nome-categoria").val();
-
-    var data = new FormData();
-
-    data.set("nome-categoria", nome_categoria);
-
-    $.ajax({
-      url: "../src/Controllers/Categorias.php",
-      type: "post",
-      data: data,
-      processData: false,
-      contentType: false,
-      async: false,
-      success: function () {
-        $("#input-nome-categoria").val("");
-      },
-      error: function (error) {
-        console.error("Erro na requisição: " + error);
-      },
-    });
-  });
-
   // Requisição da página de registro de produtos
   $("button#registrar-produto").click(function () {
     var nome_produto = $("#input-nome-produto").val();
@@ -49,6 +25,57 @@ $(document).ready(function () {
       },
       error: function (error) {
         console.error("Erro na requisição: " + error);
+      },
+    });
+  });
+
+  // Requisição da página de criação de categorias
+  $("button#criar-categoria").click(function () {
+    var nome_categoria = $("#input-nome-categoria").val();
+
+    var data = new FormData();
+
+    data.set("nome-categoria", nome_categoria);
+
+    $.ajax({
+      url: "../src/Controllers/Categorias.php",
+      type: "post",
+      data: data,
+      processData: false,
+      contentType: false,
+      async: false,
+      success: function () {
+        $("#input-nome-categoria").val("");
+      },
+      error: function (error) {
+        console.error("Erro na requisição: " + error);
+      },
+    });
+  });
+
+  // Requisição da página de gerenciamento de categorias
+  $("button.update-category").click(function () {
+    var id_categoria = $(this).val();
+    var categoria = "#category-name-" + id_categoria;
+    var nome_categoria = $(categoria).val();
+
+    var data = new FormData();
+
+    data.set("nome-categoria", nome_categoria);
+    data.set("id-categoria", id_categoria);
+
+    $.ajax({
+      url: "../src/Controllers/Categorias.php",
+      type: "post",
+      data: data,
+      processData: false,
+      contentType: false,
+      async: false,
+      success: function () {
+        $(categoria).val(nome_categoria);
+      },
+      error: function (error) {
+        console.error("Erro na requisisção: " + error);
       },
     });
   });

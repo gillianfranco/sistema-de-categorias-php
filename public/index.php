@@ -32,7 +32,7 @@
 
                         while ($category = mysqli_fetch_array($result)){
                     ?>
-                    <option value="<?php echo strtolower($category['id']); ?>"><?php echo $category['nome']; ?></option>
+                    <option value="<?php echo $category['id']; ?>"><?php echo $category['nome']; ?></option>
                     <?php
                         }
                     ?>
@@ -40,7 +40,7 @@
             </div>
         </div>
         <div class="botoes">
-            <a href="" id="gerenciar-categorias">Gerenciar Categorias</a>
+            <a href="gerenciar-categorias.php" id="gerenciar-categorias">Gerenciar Categorias</a>
             <a href="criar-categoria.php" id="criar-categoria">Criar Nova Categoria</a>
             <a href="" id="gerenciar-produtos">Gerenciar Produtos</a>
             <button type="button" id="registrar-produto">Registrar Produto</button>

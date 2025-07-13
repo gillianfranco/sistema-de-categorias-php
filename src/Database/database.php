@@ -17,6 +17,15 @@
         }
     }
 
+    function update_category($conn, $table_name, $category_id, $category_name){
+        $sql = "UPDATE $table_name SET nome = '" . cleanString($category_name) . "' WHERE id = $category_id";
+        $update = mysqli_query($conn, $sql);
+
+        if (!$update){
+            die("Falha ao atualizar o nome da categoria: " . mysqli_error($conn));
+        }
+    }
+
     // Verifica se a categoria existe
 
     function category_exists($conn, $table_name, $category_name) {
