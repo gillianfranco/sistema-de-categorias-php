@@ -18,7 +18,7 @@ div.main {
   padding: 2em;
 }
 
-h1.titulo-pagina {
+h1.title-page {
   text-align: center;
 }
 
@@ -31,7 +31,7 @@ div.form-container {
   justify-content: space-evenly;
 }
 
-div.campo-form {
+div.field-form {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -39,13 +39,13 @@ div.campo-form {
   width: 320px;
 }
 
-div.campo-form label {
+div.field-form label {
   font-size: 1.2em;
   margin-bottom: 8px;
 }
 
-div.campo-form input,
-div.campo-form select {
+div.field-form input,
+div.field-form select {
   font-size: 0.8em;
   padding: 0.3em;
   border: 1px black solid;
@@ -54,22 +54,22 @@ div.campo-form select {
   text-align: center;
 }
 
-div.campo-form select {
+div.field-form select {
   cursor: pointer;
 }
 
-div.campo-form select option {
+div.field-form select option {
   color: black;
 }
 
-div.botoes {
+div.btns {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
 }
 
-div.botoes button,
-div.botoes a {
+div.btns button,
+div.btns a {
   padding: 0.3em;
   font-size: 0.7em;
   width: 150px;
@@ -82,12 +82,12 @@ div.botoes a {
   margin: 0.5em;
 }
 
-div.botoes button:hover,
-div.botoes a:hover {
+div.btns button:hover,
+div.btns a:hover {
   transform: scale(1.1);
 }
 
-div.botoes a {
+div.btns a {
   text-decoration: none;
   background-color: blue;
   display: flex;
@@ -95,7 +95,7 @@ div.botoes a {
   justify-content: center;
 }
 
-div.botoes button {
+div.btns button {
   background-color: green;
 }
 
@@ -138,4 +138,15 @@ td.category-edit button.update-category {
 
 td.category-edit button.delete-category {
   background-color: red;
+}
+
+td.container-view button {
+  border-radius: 2px;
+  cursor: pointer;
+  color: white;
+  background-color: blue;
+}
+
+table#table-products {
+  display: none;
 }

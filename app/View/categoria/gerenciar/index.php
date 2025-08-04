@@ -3,16 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/style.css">
+    <link rel="stylesheet" href="../assets/style.css">
     <title>Sistema de Categorias</title>
 </head>
 <body>
-    <?php
-        require_once "../src/Database/db-connection.php";
-        require_once "../src/Database/database.php";
-    ?>
     <div class="main">
-        <h1 class="titulo-pagina">Gerenciamento de Categorias</h1>
+        <h1 class="title-page">Gerenciamento de Categorias</h1>
         <hr style="margin-top: 1em;">
         <div class="table">
             <table>
@@ -20,27 +16,30 @@
                     <th>ID</th>
                     <th>Nome</th>
                     <th>Qtde. Produtos</th>
+                    <th>Quantia Total</th>
                     <th>Opções</th>
                 </thead>
                 <tbody style="border-bottom: 1px solid black;">
                     <?php
-                        $sql = "SELECT * FROM $table_categories";
-                        $categories = mysqli_query($connection, $sql);
+                        $categories = $data["categories"];
 
-                        while ($category = mysqli_fetch_array($categories)){
+                        foreach($categories as $category){
                     ?>
                     <tr>
                         <td>
-                            <?php echo $category['id'];?>
+                            <p><?= $category["id"] ?></p>
                         </td>
                         <td>
-                            <input type="text" name="nome-categoria" id="category-name-<?php echo $category['id'];?>" value="<?php echo $category['nome'];?>">
+                            <input type="text" name="category-name" id="category-name-<?= $category["id"] ?>" value="<?= $category["nome"] ?>">
                         </td>
                         <td>
-                            <?php echo $category['qtde_produtos'];?>
+                            <p><?= $category["total_estoque"] ?></p>
+                        </td>
+                        <td>
+                            <p>R$ <?= $category["total_dinheiro"] ?></p>
                         </td>
                         <td class="category-edit">
-                            <button class="update-category" value="<?php echo $category['id'];?>">U</button>
+                            <button class="update-category" value="<?= $category["id"] ?>">U</button>
                             <button class="delete-category">D</button>
                         </td>
                     </tr>
@@ -51,8 +50,8 @@
             </table>
         </div>
         <hr style="margin-bottom: 1em;">
-        <div class="botoes">
-            <a href="index.php" id="criar-categoria">Voltar</a>
+        <div class="btns">
+            <a href="<?= url("/")?>" id="create-category">Voltar</a>
         </div>
     </div>
     <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>

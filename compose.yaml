@@ -1,0 +1,9 @@
+services:
+  mysql:
+    image: mysql:8.0
+    environment:
+      MYSQL_ROOT_PASSWORD: ${DB_PASSWORD}
+      MYSQL_DATABASE: ${DB_DATABASE}
+      TZ: America/Sao_Paulo
+    ports:
+      - ${DB_PORT}:3306
