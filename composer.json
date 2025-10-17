@@ -25,12 +25,13 @@
   },
   "scripts": {
     "dev": [
-      "@database:up",
+      "@services:up",
+      "@phinx:migrate",
       "@local-server"
     ],
     "local-server": "php -S localhost:8000 -t public",
-    "database:up": "docker compose up -d",
-    "database:down": "docker compose down",
+    "services:up": "docker compose up -d",
+    "services:down": "docker compose down",
     "phinx:create-table": "vendor/bin/phinx create",
     "phinx:migrate": "vendor/bin/phinx migrate",
     "phinx:rollback": "vendor/bin/phinx rollback"
